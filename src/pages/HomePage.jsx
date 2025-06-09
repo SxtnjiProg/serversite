@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FaFilter } from 'react-icons/fa';
 import '../assets/css/cards.css';
-
+import '../assets/css/filter-styles.css';
 function HomePage() {
     const [servers, setServers] = useState(JSON.parse(localStorage.getItem('servers') || '[]'));
     const [filteredServers, setFilteredServers] = useState(servers);
@@ -152,7 +152,7 @@ function HomePage() {
                     className="btn btn-link text-white d-flex align-items-center mx-auto filter-button"
                     onClick={toggleFilterPanel}
                 >
-                    <FaFilter className="me-1" /> Фільтри
+                    <FaFilter className="me-1" />
                 </button>
                 <div
                     className={`filter-panel p-3 ${isFilterOpen ? 'filter-open' : ''}`}

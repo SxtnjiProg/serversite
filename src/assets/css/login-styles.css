@@ -1,0 +1,65 @@
+.card {
+    background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(128, 0, 128, 0.4);
+    padding: 20px;
+    position: relative;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.card h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #ddd;
+}
+
+.form-control {
+    background: linear-gradient(135deg, #2b2d42 0%, #1a1a2e 100%);
+    border: 1px solid #800080;
+    color: #fff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #d8a7e0;
+    box-shadow: 0 0 5px rgba(216, 167, 224, 0.5);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #2b2d42, #3a3f5e);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #3a3f5e, #2b2d42);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(128, 0, 128, 0.3);
+}
+
+.text-primary {
+    color: #d8a7e0 !important;
+}
+
+#googleSignInButton {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#googleSignInButton > div {
+    border-radius: 6px;
+    overflow: hidden;
+}

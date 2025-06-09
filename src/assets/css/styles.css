@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 body {
-    background-color: #1a1a2e;
+    background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 100%);
     margin: 0;
     padding: 0;
     color: #fff;
@@ -9,6 +9,18 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 0%, rgba(128, 0, 128, 0.1), transparent 70%);
+    z-index: -1;
 }
 
 main {
@@ -53,13 +65,7 @@ main {
     padding: 20px;
 }
 
-.card {
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    background: #16213e;
-    overflow: hidden;
-}
-
+/* Інші стилі */
 .navbar {
     background: linear-gradient(135deg, #2b2d42 0%, #1a1a2e 100%);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -205,7 +211,7 @@ main {
 }
 
 .form-label {
-    color: #fff;
+    color: #ddd;
     font-weight: 500;
     font-size: 14px;
     margin-bottom: 6px;
@@ -367,37 +373,7 @@ footer {
     color: #ddd;
 }
 
-.btn-primary {
-    background: linear-gradient(90deg, #ff7f50, #ff4500);
-    border: none;
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(90deg, #ff4500, #ff7f50);
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(255, 127, 80, 0.4);
-}
-
-.d-flex {
-    display: flex;
-    background: #1a1a2e;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.text-muted {
-    color: #aaa !important;
-}
-
 /* Futuristic Footer Styles */
-
 .footer-futuristic {
     background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 100%);
     padding: 3rem 0;

@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext();
 
@@ -6,6 +7,7 @@ export { AuthContext };
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
+    const navigate = useNavigate();
 
     const login = (userData, redirect = true) => {
         const defaultUser = {
@@ -15,16 +17,16 @@ export function AuthProvider({ children }) {
             plans: {
                 ...user?.plans,
                 ...(userData.plans || {})
-            } || {}, // Об’єднуємо плани, зберігаючи масиви
+            } || {},
             createdAt: userData.createdAt || new Date().toISOString(),
         };
         setUser(defaultUser);
         localStorage.setItem('user', JSON.stringify(defaultUser));
         if (redirect) {
             if (defaultUser.role === 'admin') {
-                window.location.href = '/admin-profile';
+                navigate('/admin-profile');
             } else {
-                window.location.href = '/user-profile';
+                navigate('/user-profile');
             }
         }
     };
@@ -32,7 +34,7 @@ export function AuthProvider({ children }) {
     const logout = () => {
         setUser(null);
         localStorage.removeItem('user');
-        window.location.href = '/login';
+        navigate('/login');
     };
 
     return (
