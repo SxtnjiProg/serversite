@@ -1,0 +1,183 @@
+.server-details-card {
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(128, 0, 128, 0.3);
+    background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 100%);
+    color: #fff;
+    overflow: hidden;
+    border: 2px solid #800080;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.server-details-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 0%, rgba(128, 0, 128, 0.1), transparent 70%);
+    z-index: 0;
+}
+
+.card-header.bg-dark {
+    background: linear-gradient(90deg, #2b2d42, #3a3f5e);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(128, 0, 128, 0.2);
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #800080;
+}
+
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+    background: rgba(22, 33, 62, 0.9);
+    position: relative;
+    z-index: 1;
+}
+
+.plans-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.plans-list {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    margin: 1rem 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    min-width: 0;
+}
+
+.plan-item {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    background: linear-gradient(90deg, #2b2d42, #3a3f5e);
+    border: 2px solid #800080;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 150px;
+    min-width: 120px;
+    height: 80px;
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.plan-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 0%, rgba(128, 0, 128, 0.05), transparent 70%);
+    z-index: 0;
+}
+
+.plan-item:hover,
+.plan-item.active {
+    border-color: #d8a7e0;
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(216, 167, 224, 0.5);
+}
+
+.plan-item.expanded {
+    height: auto;
+    padding-bottom: 0.8rem;
+    min-height: 100px;
+}
+
+.plan-item span {
+    display: block;
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 1;
+}
+
+.plan-item .price {
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+.plan-advantages {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    color: #ddd;
+}
+
+.plan-advantages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-advantages ul li {
+    margin: 0.1rem 0;
+}
+
+.btn-order {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: linear-gradient(90deg, #2b2d42, #3a3f5e);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    pointer-events: none;
+    border: 2px solid #800080;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn-order.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.btn-order:hover {
+    background: linear-gradient(90deg, #3a3f5e, #2b2d42);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(128, 0, 128, 0.4);
+}
+
+.plan-details {
+    margin-top: 1.5rem;
+    color: #ddd;
+    font-size: 0.85rem;
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.plan-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-details ul li {
+    margin-bottom: 0.4rem;
+}
+
+.plan-details ul li span {
+    margin-left: 0.4rem;
+}
